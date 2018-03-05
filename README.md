@@ -1,6 +1,11 @@
 ## Pigtus
 > Simple card game
 
+## Coding Guidelines from Airbnb:
+- https://github.com/airbnb/javascript/tree/master/react
+- https://github.com/airbnb/javascript
+
+
 ## Git management
 ### Branch naming:
 1. for feature: *features/feature_name*
