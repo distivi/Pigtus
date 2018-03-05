@@ -1,0 +1,11 @@
+# ESLint for Sublime
+( It is not recommended to install ESLint globally, I would recommend to install it locally, just remove "-g" option from commnands)
+npm i -g babel-eslint
+npm i -g eslint-plugin-jest
+npm i -g eslint-plugin-react
+npm i -g eslint-plugin-jsx-a11y
+npm i -g eslint-plugin-flowtype
+npm i -g eslint-plugin-import
+
+## Install SublimeLinter
+## Install SublimeLinter-contrib-eslint
