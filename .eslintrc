@@ -30,8 +30,6 @@
         "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|svg|json)$"]
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
         "./eslint/rules.js"
     ]
 }

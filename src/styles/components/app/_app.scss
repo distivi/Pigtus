@@ -1,24 +1,29 @@
-.App {
+$header-color: #222;
+$header-text-color: #000;
+$app-background-color: #070;
+
+.app {
+  background: $app-background-color;
   text-align: center;
 }
 
-.App-logo {
+.app-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
+.app-header {
+  background-color: $header-color;
+  color: $header-text-color;
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
-.App-title {
+.app-title {
   font-size: 1.5em;
 }
 
-.App-intro {
+.app-intro {
   font-size: large;
 }
 
