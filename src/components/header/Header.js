@@ -18,6 +18,9 @@ export class Header extends React.Component {
 					<div className="header-title">
 						{this.props.title}
 					</div>
+					<span className="header-notification">
+						<span className="notification-counter">2</span>
+					</span>
 				</div>
 		);
 	}

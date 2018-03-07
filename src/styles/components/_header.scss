@@ -1,5 +1,7 @@
 $header-background-color: #393535;
 $header-title-color: #fff;
+$notification-color: red;
+$header-notification-color: #fff;
 
 .header {
 	background-color: $header-background-color;
@@ -34,5 +36,33 @@ $header-title-color: #fff;
 
 		outline: none;
 		border: none;
+	}
+
+	.header-notification {
+		background: url('../media/notification.png');
+		background-size: contain;
+
+		position: absolute;
+		top: 0.75rem;
+		right: 0.5rem;
+
+		height: 1.75rem;
+		width: 1.75rem;
+
+		.notification-counter {
+			font-size: 0.7rem;
+			font-weight: 300;
+
+			background-color: $notification-color;
+			color: $header-notification-color;
+
+			border-radius: 2px;
+			height: 1rem;
+			width: 1rem; 
+
+			position: absolute;
+			bottom: -0.2rem;
+			right: -0.2rem;
+		}
 	}
 }

@@ -60,6 +60,25 @@
     bottom: 0rem;
     outline: none;
     border: none; }
+  .header .header-notification {
+    background: url("../media/notification.png");
+    background-size: contain;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    height: 1.75rem;
+    width: 1.75rem; }
+    .header .header-notification .notification-counter {
+      font-size: 0.7rem;
+      font-weight: 300;
+      background-color: red;
+      color: #fff;
+      border-radius: 2px;
+      height: 1rem;
+      width: 1rem;
+      position: absolute;
+      bottom: -0.2rem;
+      right: -0.2rem; }
 
 .menu {
   padding-top: 15vh;
