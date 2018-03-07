@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
+import { Header } from '../header/Header';
+import { Menu } from '../menu/Menu';
 
 class App extends Component {
 	render() {
 		return (
 			<div className="app">
-				<div className="backdrop">
-					Pigtus
-				</div>
+					<Header title="Pigtus"/>
 			</div>
 		);
 	}

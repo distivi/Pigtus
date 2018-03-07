@@ -1,0 +1,38 @@
+$header-background-color: #393535;
+$header-title-color: #fff;
+
+.header {
+	background-color: $header-background-color;
+
+	display: flex;
+	flex-direction: column;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 3rem;
+	width: 100vw;
+
+	text-align: center;
+	opacity: 0.8;
+
+	.header-title {
+		color: $header-title-color;
+		font: 'Garamond';
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+
+	.header-action {
+		font-size: 1rem;
+		background: none;
+		color: $header-title-color;
+
+		position: absolute;
+		top: 0rem;
+		bottom: 0rem;
+
+		outline: none;
+		border: none;
+	}
+}
