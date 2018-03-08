@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Header } from '../header/Header';
-import { Menu } from '../menu/Menu';
+import Header from '../Header/Header';
+import { Menu } from '../Menu/Menu';
 
 class App extends Component {
 	render() {

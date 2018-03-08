@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import HeaderNotification from './HeaderNotification/HeaderNotification';
 
-export class Header extends React.Component {
+export default class Header extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -18,9 +19,7 @@ export class Header extends React.Component {
 					<div className="header-title">
 						{this.props.title}
 					</div>
-					<span className="header-notification">
-						<span className="notification-counter">2</span>
-					</span>
+					<HeaderNotification count={0}/>
 				</div>
 		);
 	}
