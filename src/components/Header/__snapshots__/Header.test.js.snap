@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> Header is consistent with mockup 1`] = `
+<div
+  className="header"
+>
+  <button
+    className="header-action"
+    id="btn-log-out"
+    onClick={[Function]}
+    type="button"
+  >
+    Log out
+  </button>
+  <div
+    className="header-title"
+  >
+    Mock
+  </div>
+  <div
+    className="header-notification"
+    onClick={[Function]}
+  >
+    <div
+      className="notification-counter"
+    >
+      1
+    </div>
+  </div>
+</div>
+`;
