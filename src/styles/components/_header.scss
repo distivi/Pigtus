@@ -9,7 +9,7 @@ $header-notification-color: #fff;
   display: flex;
   flex-direction: column;
 
-  height: 3rem;
+  height: $header-height;
   left: 0;
   opacity: .8;
   position: fixed;
