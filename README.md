@@ -9,7 +9,7 @@
 ## Git management
 ### Branch naming:
 1. for feature: *features/feature_name*
-1. for issues: *fixes/issue_number*
+1. for issues: *issues/issue_number*
 1. for hot fix: *hotfixes/issue_number*
 1. for releases: *releases/version_number/build_number*
 
