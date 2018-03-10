@@ -1,0 +1,35 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "jest/globals": true
+    },
+    "root": true,
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "generators": false,
+            "objectLiteralDuplicateProperties": false,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "plugins": ["jsx", "import", "flowtype", "jsx-a11y", "react", "jest"],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".json"]
+            }
+        },
+        "import/extensions": [".js", ".jsx"],
+        "import/core-modules": [],
+        "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|svg|json)$"]
+    },
+    "extends": [
+        "./eslint/rules.js"
+    ]
+}
