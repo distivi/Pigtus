@@ -16,11 +16,11 @@
 ## Todo:
 ### Setup
 1. [x] Create Git Repo
-1. [ ] Setup React App
-1. [ ] Setup SASS Compiler
-1. [ ] Setup Lint
-1. [ ] Setup Jest and add simple test
-1. [ ] Add base App 
+1. [x] Setup React App
+1. [x] Setup SASS Compiler
+1. [x] Setup Lint
+1. [x] Setup Jest and add simple test
+1. [x] Add base App 
 
 ### Base components
 1. [ ] Buttons
