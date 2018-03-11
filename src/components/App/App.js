@@ -4,10 +4,19 @@ import { Menu } from '../Menu/Menu';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
+  get isHome() {
+    return this.props.location && this.props.location.pathname === '/' ?
+      true :
+      false;
+  }
+
   render() {
     return (
       <div className="app">
-        <Header notificationCount={23} title="Pigtus"/>
+        <Header notificationCount={23}
+          title="Pigtus"
+          isHome={this.isHome}
+          history={this.props.history}/>
         <div className="app-view">
           <Switch>
             <Route exact path="/" component={Menu}/>

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default class HeaderNotification extends React.Component {
   getNotificationCount = () => {
@@ -18,18 +19,24 @@ export default class HeaderNotification extends React.Component {
     }
   }
 
+  renderNotification = () => {
+
+  }
+
   render() {
     const count = this.getNotificationCount();
     return (
-        <div className="header-notification"
-          onClick={this.openNotification}>
+        <Link className="header-notification"
+          onClick={this.openNotification}
+          to={this.props.target || '/help'}>
           {count}
-        </div>
+        </Link>
     );
   }
 }
 
 HeaderNotification.propTypes = {
   count: PropsTypes.number,
+  target: PropsTypes.string,
   openNotification: PropsTypes.func
 };

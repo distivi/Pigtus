@@ -79,6 +79,7 @@ body {
     font-size: .7rem;
     font-weight: 300;
     height: 1rem;
+    line-height: 1rem;
     min-width: 1rem;
     position: absolute;
     right: -.2rem; }

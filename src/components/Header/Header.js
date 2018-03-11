@@ -7,7 +7,7 @@ export default class Header extends React.Component {
     super(props);
 
     this.state = {
-      text: 'Pigtus'
+      title: 'Pigtus'
     };
   }
 
@@ -34,11 +34,11 @@ export default class Header extends React.Component {
   get backButton() {
     return <button id="btn-log-out" type="button"
             onClick={this.goBack}
-            className="header-action">Log out</button>;
+            className="header-action">Back</button>;
   }
 
   get headerActionButton() {
-    return this.props.location === '/' ?
+    return this.props.isHome ?
       this.logoutButton :
       this.backButton;
   }
@@ -50,7 +50,7 @@ export default class Header extends React.Component {
         <div className="header-title">
           {this.props.title}
         </div>
-        <HeaderNotification count={this.props.notificationCount}/>
+        <HeaderNotification target="help" count={this.props.notificationCount}/>
       </div>
     );
   }
@@ -58,6 +58,7 @@ export default class Header extends React.Component {
 
 Header.propTypes = {
   title: PropTypes.string,
+  isHome: PropTypes.bool.isRequired,
   notificationCount: PropTypes.number,
   handleLogout: PropTypes.func
 };
