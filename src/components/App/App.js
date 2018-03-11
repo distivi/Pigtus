@@ -5,9 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   get isHome() {
-    return this.props.location && this.props.location.pathname === '/' ?
-      true :
-      false;
+    return this.props.location && this.props.location.pathname === '/';
   }
 
   render() {
