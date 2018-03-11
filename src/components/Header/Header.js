@@ -19,13 +19,34 @@ export default class Header extends React.Component {
     }
   }
 
+  goBack = () => {
+    if (this.props.history.goBack) {
+      this.props.history.goBack(-1);
+    }
+  }
+
+  get logoutButton() {
+    return <button id="btn-log-out" type="button"
+            onClick={this.makeLogout}
+            className="header-action">Log out</button>;
+  }
+
+  get backButton() {
+    return <button id="btn-log-out" type="button"
+            onClick={this.goBack}
+            className="header-action">Log out</button>;
+  }
+
+  get headerActionButton() {
+    return this.props.location === '/' ?
+      this.logoutButton :
+      this.backButton;
+  }
+
   render() {
     return (
       <div className="header">
-        <button id="btn-log-out" type="button"
-          onClick={this.makeLogout}
-          className="header-action">Log out</button>
-
+        {this.headerActionButton}
         <div className="header-title">
           {this.props.title}
         </div>
