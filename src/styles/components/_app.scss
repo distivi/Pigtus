@@ -26,13 +26,6 @@ $app-background: '../media/main_background_3.jpg';
   height: 80px;
 }
 
-.app-header {
-  background-color: $header-color;
-  color: $header-text-color;
-  height: 150px;
-  padding: 20px;
-}
-
 .app-title {
   font-size: 1.5em;
 }
@@ -44,4 +37,8 @@ $app-background: '../media/main_background_3.jpg';
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.app-view {
+  padding-top: $header-height;
 }

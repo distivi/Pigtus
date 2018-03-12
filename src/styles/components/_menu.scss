@@ -1,15 +1,26 @@
 $button-background-color: #393535;
-$opacity: 0.8;
+$opacity: 0.7;
+$menu-item-color: white;
 
 .menu {
-	padding-top: 15vh;
-	width: 90vw;
-	margin: auto;
+  padding-top: 15vh;
+  width: 90vw;
+  margin: auto;
 
-	.btn {
-		color: white;
-		border: 1px solid;
-		background-color: $button-background-color;
-		opacity: $opacity;
-	}
+  .menu-item {
+    color: $menu-item-color;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background: black;
+    margin-bottom: 10px;
+    min-height: 3rem;
+    opacity: $opacity;
+    outline: none;
+    border-radius: 8px;
+  }
 }

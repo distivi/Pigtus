@@ -22,9 +22,13 @@ export default class Header extends React.Component {
   render() {
     return (
       <div className="header">
-        <button id="btn-log-out" type="button"
+        <button
+          id="btn-log-out"
+          type="button"
           onClick={this.makeLogout}
-          className="header-action">Log out</button>
+          className="header-action">
+            Log out
+        </button>
 
         <div className="header-title">
           {this.props.title}
