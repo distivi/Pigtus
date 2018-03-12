@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HeaderNotification/> HeaderNotification is consistent with mock 1`] = `
-<div
+<a
   className="header-notification"
+  href="/help"
   onClick={[Function]}
 >
   
-</div>
+</a>
 `;
