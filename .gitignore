@@ -1,2 +1,5 @@
 # node modules
 /node_modules/*
+
+# css files
+/src/styles/index.css

@@ -6,19 +6,9 @@ $app-background: '../media/main_background_3.jpg';
 
 .app {
   background: url($app-background);
+  height: 100vh;
   margin: auto;
   width: 100vw;
-  height: 100vh;
-}
-
-.backdrop {
-  color: white;
-  height: 100vh;
-  background: $app-backdrop-color;
-  mix-blend-mode: multiply;
-  font: bolder 2vw 'Alfa Slab One';
-  text-align: center;
-  margin: 0;
 }
 
 .app-logo {
