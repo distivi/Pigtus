@@ -5,7 +5,7 @@ export class Menu extends React.Component {
   constructor(props) {
     super(props);
 
-    this.defaultItems = [{ title: 'Create Game', path: 'new' },
+    this.defaultItems = [{ title: 'New Game', path: 'new' },
       { title: 'Join Game', path: 'join' },
       { title: 'Results', path: 'results' },
       { title: 'Friends', path: 'friends' },

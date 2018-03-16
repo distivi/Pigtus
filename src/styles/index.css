@@ -5,18 +5,9 @@ body {
 
 .app {
   background: url("../media/main_background_3.jpg");
-  margin: auto;
-  width: 100vw;
-  height: 100vh; }
-
-.backdrop {
-  color: white;
   height: 100vh;
-  background: #4d4848;
-  mix-blend-mode: multiply;
-  font: bolder 2vw 'Alfa Slab One';
-  text-align: center;
-  margin: 0; }
+  margin: auto;
+  width: 100vw; }
 
 .app-logo {
   animation: App-logo-spin infinite 20s linear;
