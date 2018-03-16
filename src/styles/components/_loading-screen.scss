@@ -1,0 +1,41 @@
+$app-background: '../media/main_background_3.jpg';
+
+
+.loading-screen {
+  background: url($app-background);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .loading-container {
+    background: #454545;
+    color: $white;
+    mix-blend-mode: multiply;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .app-name {
+    font-size: 7rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15rem;
+  }
+
+  .loading-progress {
+    width: 90vw;
+    margin: 0 auto;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+
+  .progress {
+    background-color: #1e2832;
+  }
+
+  .progress-bar {
+    background-color: $white;
+  }
+}

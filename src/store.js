@@ -2,7 +2,10 @@ import { createStore } from 'redux';
 import rootReducer from './reducers';
 
 const initialState = {
-  loaded: true
+  loading: {
+    loaded: false,
+    loadingPercent: 0
+  }
 };
 
 export default createStore(rootReducer, initialState);
