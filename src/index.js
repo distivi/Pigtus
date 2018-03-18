@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import AppContainer from './appContainer';
 
 ReactDOM.render(
-	<Provider store={store}>
+  <Provider store={store}>
     <Router>
       <AppContainer loaded={true}/>
     </Router>

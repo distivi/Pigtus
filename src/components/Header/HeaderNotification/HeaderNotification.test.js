@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import HeaderNotification from './HeaderNotification';
 import { Link, StaticRouter, MemoryRouter } from 'react-router-dom';
 

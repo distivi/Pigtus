@@ -59,7 +59,6 @@ AppContainer.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  console.log("state:", state.loading.loaded);
   return {
     loaded: state.loading.loaded
   };
