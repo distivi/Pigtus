@@ -4,7 +4,7 @@ import { ProgressBar } from 'react-bootstrap';
 
 import { connect } from 'react-redux';
 
-class LoadingScreen extends React.Component {
+export class LoadingScreen extends React.Component {
   constructor() {
     super();
 
@@ -12,19 +12,25 @@ class LoadingScreen extends React.Component {
   }
 
   render() {
-    return (<div className='loading-screen'>
-      <div className='loading-container'>
-        <div className='app-name'> {this.appName} </div>
-        <div className='loading-progress'>
-          <ProgressBar min={ 0 } max={ 100 } now={ this.props.loadingPercent }/>
+    return (
+      <div className='loading-screen'>
+        <div className='loading-container'>
+          <div className='app-name'> {this.appName} </div>
+          <div className='loading-progress'>
+            <ProgressBar min={ 0 } max={ 100 } now={ this.props.loadingPercent }/>
+          </div>
         </div>
       </div>
-    </div>);
+    );
   }
 }
 
 LoadingScreen.propTypes = {
   loadingPercent: PropTypes.number
+};
+
+LoadingScreen.defaultProps = {
+  loadingPercent: 0
 };
 
 const mapStateToProps = (state) => {
