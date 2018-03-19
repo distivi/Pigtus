@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 
 export default class HeaderNotification extends React.Component {
   getNotificationCount = () => {
-    return this.props.count ?
-      <div className="notification-counter">{this.props.count}</div> :
-      '';
-  }
+    return this.props.count ? (
+      <div className="notification-counter">{this.props.count}</div>
+    ) : (
+      ''
+    );
+  };
 
   openNotification = () => {
     const callback = this.props.openNotification;
@@ -17,20 +19,20 @@ export default class HeaderNotification extends React.Component {
     } else {
       console.warn('No notification callback provided.');
     }
-  }
+  };
 
-  renderNotification = () => {
-
-  }
+  renderNotification = () => {};
 
   render() {
     const count = this.getNotificationCount();
     return (
-        <Link className="header-notification"
-          onClick={this.openNotification}
-          to={this.props.target || '/help'}>
-          {count}
-        </Link>
+      <Link
+        className="header-notification"
+        onClick={this.openNotification}
+        to={this.props.target || '/help'}
+      >
+        {count}
+      </Link>
     );
   }
 }

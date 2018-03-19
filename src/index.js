@@ -14,8 +14,10 @@ import AppContainer from './appContainer';
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <AppContainer loaded={true}/>
+      <AppContainer loaded={true} />
     </Router>
-  </Provider>, document.getElementById('root'));
+  </Provider>,
+  document.getElementById('root')
+);
 
 registerServiceWorker();

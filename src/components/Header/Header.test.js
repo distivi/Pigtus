@@ -12,13 +12,26 @@ import { StaticRouter } from 'react-router-dom';
 describe('<Header/>', () => {
   it('renders Header without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<StaticRouter location='/' context={ {} }><Header isHome={true}/></StaticRouter>, div);
+    ReactDOM.render(
+      <StaticRouter location="/" context={{}}>
+        <Header isHome={true} />
+      </StaticRouter>,
+      div
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 
-
   it('Header is consistent with mockup', () => {
-    const component = renderer.create(<StaticRouter location='/' context={ {} }><Header isHome={true} title="Mock" notificationCount={1} handleLogout={() => {}}/></StaticRouter>);
+    const component = renderer.create(
+      <StaticRouter location="/" context={{}}>
+        <Header
+          isHome={true}
+          title="Mock"
+          notificationCount={1}
+          handleLogout={() => {}}
+        />
+      </StaticRouter>
+    );
 
     const tree = component.toJSON();
 
@@ -28,7 +41,11 @@ describe('<Header/>', () => {
   it('Header has title "Mock"', () => {
     const expected = 'Mock';
 
-    const router = shallow(<StaticRouter location='/' context={ {} }><Header isHome={true} title="Mock"/></StaticRouter>);
+    const router = shallow(
+      <StaticRouter location="/" context={{}}>
+        <Header isHome={true} title="Mock" />
+      </StaticRouter>
+    );
     const header = router.find(Header).shallow();
 
     const actual = header.find('.header-title').text();
@@ -37,17 +54,34 @@ describe('<Header/>', () => {
   });
 
   it('Header notification counter equal to 2', () => {
-    const header = shallow(<Header isHome={true} title="Mock" notificationCount={2}/>);
+    const header = shallow(
+      <Header isHome={true} title="Mock" notificationCount={2} />
+    );
 
     expect(header.find('.notification-counter').length).toBe(0);
-    expect(header.find(HeaderNotification).shallow().find('.notification-counter').length).toBe(1);
-    expect(header.find(HeaderNotification).shallow().find('.notification-counter').text()).toBe('2');
+    expect(
+      header
+        .find(HeaderNotification)
+        .shallow()
+        .find('.notification-counter').length
+    ).toBe(1);
+    expect(
+      header
+        .find(HeaderNotification)
+        .shallow()
+        .find('.notification-counter')
+        .text()
+    ).toBe('2');
   });
 
   it('Header handleLogout callback is triggered.', () => {
     const handleLogout = sinon.spy();
 
-    const router = shallow(<StaticRouter location='/' context={ {} }><Header isHome={true} title="Mock" handleLogout={handleLogout}/></StaticRouter>);
+    const router = shallow(
+      <StaticRouter location="/" context={{}}>
+        <Header isHome={true} title="Mock" handleLogout={handleLogout} />
+      </StaticRouter>
+    );
     const header = router.find(Header).shallow();
 
     expect(header.find('.header-action').length).toBe(1);

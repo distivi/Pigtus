@@ -13,10 +13,12 @@ import store from './store';
 import { updateLoadingPercent, appLoaded } from './actions/load';
 
 function mockAppPartLoad(percent) {
-  return new Promise(resolve => setTimeout(() => {
-    store.dispatch(updateLoadingPercent(percent));
-    resolve();
-  }, 1000));
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      store.dispatch(updateLoadingPercent(percent));
+      resolve();
+    }, 1000);
+  });
 }
 
 async function mockLoadEntireApp() {
@@ -34,23 +36,17 @@ mockLoadEntireApp();
 
 class AppContainer extends React.Component {
   renderLoader = () => {
-    return <LoadingScreen/>;
-  }
+    return <LoadingScreen />;
+  };
 
   renderApp = () => {
-    return (<App {...this.props}/>);
-  }
+    return <App {...this.props} />;
+  };
 
   render() {
-    const view = this.props.loaded ?
-      this.renderApp() :
-      this.renderLoader();
+    const view = this.props.loaded ? this.renderApp() : this.renderLoader();
 
-    return (
-      <div className="app-container">
-          {view}
-      </div>
-    );
+    return <div className="app-container">{view}</div>;
   }
 }
 
