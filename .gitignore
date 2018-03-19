@@ -3,3 +3,6 @@
 
 # css files
 /src/styles/index.css
+
+# eslint
+.eslintcache

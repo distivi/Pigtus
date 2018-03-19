@@ -5,9 +5,36 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 
+import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+
+// just for test
+
+import store from './store';
+import { updateLoadingPercent, appLoaded } from './actions/load';
+
+function mockAppPartLoad(percent) {
+  return new Promise(resolve => setTimeout(() => {
+    store.dispatch(updateLoadingPercent(percent));
+    resolve();
+  }, 1000));
+}
+
+async function mockLoadEntireApp() {
+  await mockAppPartLoad(15);
+  await mockAppPartLoad(32);
+  await mockAppPartLoad(65);
+  await mockAppPartLoad(99);
+  await mockAppPartLoad(100);
+  store.dispatch(appLoaded());
+}
+
+mockLoadEntireApp();
+
+// end test
+
 class AppContainer extends React.Component {
   renderLoader = () => {
-    return (<div> Loading app </div>);
+    return <LoadingScreen/>;
   }
 
   renderApp = () => {
@@ -33,7 +60,7 @@ AppContainer.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    loaded: state.loaded
+    loaded: state.loading.loaded
   };
 };
 
