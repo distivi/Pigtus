@@ -21,9 +21,14 @@
     "lint": "eslint ./ --cache --ignore-pattern .gitignore",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "eject": "react-scripts eject",
-    "build-css": "node-sass-chokidar src/styles -o src/styles"
+    "build-css": "node-sass-chokidar src/styles -o src/styles",
+    "check-format": "prettier --config ./.prettierrc  'src/**/*.js'",
+    "format": "prettier --config ./.prettierrc --write 'src/**/*.js'"
   },
-  "pre-commit": ["precommit-msg", "lint"],
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "enzyme": "^3.3.0",
@@ -37,6 +42,7 @@
     "eslint-plugin-react": "^7.7.0",
     "eslint-restricted-globals": "^0.1.1",
     "pre-commit": "^1.2.2",
+    "prettier": "^1.11.1",
     "react-test-renderer": "^16.2.0",
     "sinon": "^4.4.2"
   }

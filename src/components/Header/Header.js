@@ -17,40 +17,53 @@ export default class Header extends React.Component {
     } else {
       console.warn('No logout handler provided!');
     }
-  }
+  };
 
   goBack = () => {
     if (this.props.history.goBack) {
       this.props.history.goBack(-1);
     }
-  }
+  };
 
   get logoutButton() {
-    return <button id="btn-log-out" type="button"
-            onClick={this.makeLogout}
-            className="header-action">Log out</button>;
+    return (
+      <button
+        id="btn-log-out"
+        type="button"
+        onClick={this.makeLogout}
+        className="header-action"
+      >
+        Log out
+      </button>
+    );
   }
 
   get backButton() {
-    return <button id="btn-log-out" type="button"
-            onClick={this.goBack}
-            className="header-action">Back</button>;
+    return (
+      <button
+        id="btn-log-out"
+        type="button"
+        onClick={this.goBack}
+        className="header-action"
+      >
+        Back
+      </button>
+    );
   }
 
   get headerActionButton() {
-    return this.props.isHome ?
-      this.logoutButton :
-      this.backButton;
+    return this.props.isHome ? this.logoutButton : this.backButton;
   }
 
   render() {
     return (
       <div className="header">
         {this.headerActionButton}
-        <div className="header-title">
-          {this.props.title}
-        </div>
-        <HeaderNotification target="help" count={this.props.notificationCount}/>
+        <div className="header-title">{this.props.title}</div>
+        <HeaderNotification
+          target="help"
+          count={this.props.notificationCount}
+        />
       </div>
     );
   }
@@ -62,4 +75,3 @@ Header.propTypes = {
   notificationCount: PropTypes.number,
   handleLogout: PropTypes.func
 };
-
